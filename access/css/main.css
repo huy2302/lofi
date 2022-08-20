@@ -1,0 +1,344 @@
+html {
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    background-image: linear-gradient(180deg, rgba(66, 65, 65, .8), transparent);
+    height: 100px;
+    z-index: 1;
+}
+
+.container {
+    width: 90%;
+    height: 100px;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    padding: 0 48px;
+}
+
+header .header-img img {
+    height: 100px;
+    width: auto;
+}
+
+#0000004fbar {
+    display: flex;
+    align-items: center;
+    margin-left: -10%;
+}
+
+#navbar li {
+    list-style-type: none;
+}
+
+#navbar li a {
+    display: block;
+    padding: 20px 18px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 800;
+    transition: 0.3s;
+}
+
+#navbar .subnav {
+    display: none;
+}
+
+#navbar li:hover a {
+    opacity: 0.5;
+}
+
+/* Button setting */
+
+.header-setting {
+    display: flex;
+    align-items: center;
+    margin-left: -7%;
+}
+
+/* Toggle switch */
+.header-setting .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.header-setting .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #cccccc29;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+input:checked+.slider {
+    /* background-color: #2196F3; */
+}
+
+input:focus+.slider {
+    /* box-shadow: 0 0 1px #2196F3; */
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.fa-sun {
+    display: block;
+    position: absolute;
+    font-size: 17px;
+    top: 9px;
+    left: 6px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.fa-moon {
+    display: block;
+    position: absolute;
+    font-size: 17px;
+    top: 9px;
+    left: 38px;
+    color: #fff;
+    cursor: pointer;
+
+}
+
+/* End toggle switch */
+
+.header-setting .btn i {
+    font-size: 25px;
+    transition: 0.3s;
+}
+
+.header-setting .btn-full,
+.header-setting button {
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.header-setting button,
+.header-setting a {
+    transition: 0.3s;
+}
+
+.header-setting .btn-full i {
+    font-size: 25px;
+}
+
+/* Login */
+
+.header-setting {
+    display: flex;
+    align-items: center;
+}
+
+.header-setting a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+.header-setting .share {
+    font-size: 12px;
+    background-color: rgba(0, 0, 0, 0.068);
+    padding: 8px 15px;
+    background-color: #ffffff20;
+    border-radius: 50px;
+}
+
+.header-setting .signup {
+    font-size: 16px;
+    background-color: #ffffff20;
+    border-radius: 50px;
+    padding: 10px 22px;
+}
+
+.header-setting .login {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.header-setting .share,
+.header-setting .signup,
+.header-setting .login {
+    margin: 0 10px;
+}
+
+.header-setting button:hover,
+.header-setting a:hover {
+    opacity: 0.5;
+}
+
+
+
+
+.show {
+    display: block !important;
+}
+
+.icon-show i {
+    font-size: 18px !important;
+    opacity: 0.5;
+}
+
+.videoIn {
+    object-fit: cover;
+    position: absolute;
+}
+
+.bg-video__rainyday {
+    display: none;
+}
+
+.bg-video__night {
+    display: none;
+}
+
+.bg-video__rainynight {
+    display: none;
+}
+
+.bg-video__rainyday,
+.bg-video__night,
+.bg-video__rainynight {
+    transition: 0.2;
+}
+
+.navbar {
+    position: absolute;
+    width: 100px;
+    height: 100vh;
+    right: 0;
+}
+
+.navbar--container {
+    position: absolute;
+    width: 75px;
+    height: 250px;
+    background-color: #00000078;
+    z-index: 1;
+    right: 18px;
+    top: 30%;
+    border-radius: 50px;
+}
+
+.navbar--icon {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+}
+
+.navbar--icon button {
+    background: none;
+    border: none;
+    display: block;
+    margin-top: 12px;
+    padding: 10px 10px;
+    border-bottom: 1px solid #0000004f;
+    cursor: pointer;
+}
+
+.navbar--icon button i {
+    margin-bottom: 10px;
+    color: #ffffff4f;
+    transition:cubic-bezier(0.31, 0.99, 0, 0.94) 0.5s;
+}
+
+.navbar--icon button:hover i{
+    color: rgb(237, 237, 237);
+}
+
+.menu {
+    position: fixed;
+    top: 75px;
+    right: 92px;
+    bottom: 0;   
+}
+
+.menu--container {
+    background-color: #000;
+    width: 350px;
+    position: relative;
+    min-height: 450px;
+    border-radius: 20px;
+    top: 30px;
+    animation: hideBuyTickets ease 0.5s;
+    display: none;
+}
+
+.menu--container h2{
+    color: #fff;
+    padding-left: 12px;
+}
+
+.menu--category {
+    display: flex;
+    width: 100%;
+    align-content: space-between;
+    justify-content: center;
+}
+.menu--category button{
+    min-width: 80px;
+    border-radius: 20px;
+    border: none;
+    margin: 0 10px;
+    background-color: #ffffff21;
+}
+.menu--category button i{
+    position: static;
+    color: #ffffff42;
+    font-size: 20px;
+}
+.menu--category button h3{
+    color: #ffffff42;
+    font-weight: 200;
+}
+.menu--content{
+    position: absolute;
+    padding: 0px 0px 13px 26px;
+}
