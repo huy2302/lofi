@@ -216,7 +216,7 @@ input:checked+.slider:before {
 
 
 
-.show {
+.active {
     display: block !important;
 }
 
@@ -229,7 +229,9 @@ input:checked+.slider:before {
     object-fit: cover;
     position: absolute;
 }
-
+.bg-video__day {
+    display: none;
+}
 .bg-video__rainyday {
     display: none;
 }

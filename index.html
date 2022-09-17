@@ -12,16 +12,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/w3_band/assets/fonts/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
 </head>
 
 <body>
     <header>
         <div class="container">
             <div class="header-img">
-                <img src="./access/img/logo.0cbf9e63.gif" alt="logo">
+                <img src="./access/img/logo.0cbf9e63.gif" alt="logo">\
             </div>
             <ul id="navbar" style="display: flex;">
                 <li><a href="">How to works</a></li>
@@ -46,12 +44,14 @@
                     <i class="fas fa-moon"></i>
                 </button> -->
 
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                    <i class="fas fa-sun fa-sun"></i>
-                    <i class="fas fa-moon fa-moon fas-hide"></i>
-                </label>
+                <div class="switch-btn">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                        <i class="fas fa-sun fa-sun"></i>
+                        <i class="fas fa-moon fa-moon fas-hide"></i>
+                    </label>
+                </div>
                 <!-- Toggle Switch -->
 
                 <button class="btn-full" onclick="openFullscreen()">
@@ -75,7 +75,7 @@
             </div>
         </div>
         <div class="bg-video">
-            <div class="bg-video__day">
+            <div class="bg-video__day active">
                 <video class="videoIn" src="./access/video/BDR Day 112521 (1).mp4" preload="auto" loop="" playsinline="" webkit-playsinline="" x5-playsinline="" style="width: 100%; height: 100%;" autoplay="" muted></video>
             </div>
             <div class="bg-video__rainyday">
