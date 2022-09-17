@@ -1,31 +1,19 @@
-const videoNight = document.querySelector('.bg-video__night');
-const videoDay = document.querySelector('.bg-video__day');
+const $ = document.querySelector.bind(document)
+const $$ = document.querySelectorAll.bind(document)
 
-const btnConvert = document.querySelector('.switch')
-
-console.log(videoDay)
-// function convertDay() {
-//     if (i % 2 == 0) {
-//         videoNight.classList.add('show')
-//     } else if (i % 2 == 1) {
-//         videoNight.classList.remove('show')
-//     }
-//     i += 0.5
-// }
+const btnConvert = $('.switch')
 var i = 2
-// btnConvert.addEventListener('click', convertDay)
-const btn = document.querySelector('.switch-btn')
+const btn = $('.switch-btn')
 btn.onclick = function () {
     if (i % 2 == 0) {
-        videoNight.classList.add('active')
-        videoDay.classList.remove('active')
+        $('.bg-video__night').classList.add('active')
+        $('.bg-video__day').classList.remove('active')
     } else if (i % 2 == 1) {
-        videoNight.classList.remove('active')
-        videoDay.classList.add('active')
+        $('.bg-video__night').classList.remove('active')
+        $('.bg-video__day').classList.add('active')
     }
     i += 0.5    
 }
-
 
 var elem = document.documentElement;
 
