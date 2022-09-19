@@ -1,0 +1,25 @@
+.btn-direction {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.direction-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.direction-container img {
+    cursor: pointer;
+    transition: 0.2s;
+}
+.direction-container img:hover {
+    opacity: 0.5;
+}
+.btn-play, .btn-pause {
+    display: none;
+    width: 54px;
+    margin: 0px 15px;
+}
+.active {
+    display: block;;
+}
