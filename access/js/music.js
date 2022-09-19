@@ -2,7 +2,6 @@ const btnPlay = $('.btn-play')
 const btnPause = $('.btn-pause')
 const audio = $('#audio')
 audio.src = 'access/music/mixichill.mp3'
-
 const btnPlayPause = $$('.btn')
 
 const app = {
@@ -24,6 +23,7 @@ const app = {
     },
     start: function() {
         this.handleEvent()
+
     }
 }
 app.start()
