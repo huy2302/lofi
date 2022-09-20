@@ -2,15 +2,33 @@ const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
 
 const btnConvert = $('.switch')
+const video = $$('.bg-video')
 var i = 2
 const btn = $('.switch-btn')
+const switchVideo = function () {
+    video.forEach((btn) => {
+        if (btn.classList.contains('active')) {
+            btn.classList.remove('active')
+        }
+    })
+}
 btn.onclick = function () {
     if (i % 2 == 0) {
-        $('.bg-video__night').classList.add('active')
-        $('.bg-video__day').classList.remove('active')
+        if ($('.bg-video__day').classList.contains('active')) {
+            switchVideo()
+            $('.bg-video__night').classList.add('active')
+        } else if ($('.bg-video__rainyday').classList.contains('active')){
+            switchVideo()
+            $('.bg-video__rainynight').classList.add('active')
+        }
     } else if (i % 2 == 1) {
-        $('.bg-video__night').classList.remove('active')
-        $('.bg-video__day').classList.add('active')
+        if ( $('.bg-video__night').classList.contains('active')) {
+            switchVideo()
+            $('.bg-video__day').classList.add('active')
+        } else if ($('.bg-video__rainynight').classList.contains('active')) {
+            switchVideo()
+            $('.bg-video__rainyday').classList.add('active')
+        }
     }
     i += 0.5    
 }
@@ -38,3 +56,26 @@ function openFullscreen() {
     }
 }
 
+const btnRain = $('.btn-rains')
+var countRain = 2
+btnRain.onclick = function() {
+    if (countRain % 2 == 0) {
+        if ($('.bg-video__day').classList.contains('active')) {
+            switchVideo()
+            $('.bg-video__rainyday').classList.add('active')
+        } else if ($('.bg-video__night').classList.contains('active')) {
+            switchVideo()
+            $('.bg-video__rainynight').classList.add('active')
+        }
+        countRain++;
+    } else if (countRain % 2 != 0){
+        if ($('.bg-video__rainyday').classList.contains('active')) {
+            switchVideo()
+            $('.bg-video__day').classList.add('active')
+        } else if ($('.bg-video__rainynight').classList.contains('active')){
+            switchVideo()
+            $('.bg-video__night').classList.add('active')
+        }
+        countRain++
+    } 
+}

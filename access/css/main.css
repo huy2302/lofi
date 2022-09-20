@@ -259,13 +259,13 @@ input:checked+.slider:before {
 
 .navbar--container {
     position: absolute;
-    width: 75px;
+    width: 49px;
     height: 250px;
-    background-color: #00000078;
+    background-color: #000000fa;
     z-index: 1;
     right: 18px;
     top: 30%;
-    border-radius: 50px;
+    border-radius: 8px;
 }
 
 .navbar--icon {
