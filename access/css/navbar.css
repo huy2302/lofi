@@ -1,0 +1,188 @@
+.navbar-content {
+  display: none;
+  position: absolute;
+  right: 67px;
+  top: 140px;
+  width: 345px;
+  border-radius: 30px;
+  background-color: rgb(18, 18, 18) !important;
+  z-index: 2;
+}
+.navbar-content .navbar-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 32px;
+}
+.navbar-content .navbar-header h2 {
+  color: #fff;
+}
+.navbar-content .navbar-btn {
+  display: flex;
+  margin: 0 32px;
+  justify-content: space-between;
+}
+.navbar-content .navbar-btn button {
+  background-color: rgb(25, 25, 25);
+  width: 84px;
+  border-radius: 20px;
+  height: 84px;
+  border: none;
+  cursor: pointer;
+}
+.navbar-content .navbar-btn button div {
+  position: relative;
+}
+.navbar-content .navbar-btn button div i {
+  position: absolute;
+  color: rgb(48, 48, 43);
+  top: -41px;
+  left: 15px;
+  transition: 0.3s ease-in-out;
+  font-size: 36px;
+}
+.navbar-content .navbar-btn button div .fa-moon {
+  left: 23px !important;
+}
+.navbar-content .navbar-btn button div .fa-drum {
+  left: 15px !important;
+}
+.navbar-content .navbar-btn button div .fa-mug-saucer {
+  left: 14px !important;
+}
+.navbar-content .navbar-btn button div h3 {
+  font-size: 16px;
+  color: rgb(48, 48, 43);
+  transition: 0.3s ease-in-out;
+  margin-top: 49px;
+}
+.navbar-content .volume-line {
+  display: flex;
+  justify-content: space-between;
+  margin: 32px 32px;
+  align-items: center;
+}
+.navbar-content .volume-line i {
+  color: #F3B064;
+}
+.navbar-content .volume-line input {
+  -webkit-appearance: none;
+  width: 201px;
+  height: 12px;
+  background: #F3B064;
+  border-radius: 20px;
+  outline: none;
+}
+.navbar-content .volume-line input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 17px;
+  height: 17px;
+  border-radius: 50px;
+  background: #fff;
+  cursor: pointer;
+}
+.navbar-content .volume-line input::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50px;
+  background: #fff;
+  cursor: pointer;
+}
+.navbar-content .navbar-sound {
+  margin: 0 32px;
+}
+.navbar-content .navbar-sound h2 {
+  color: #fff;
+  font-size: 20px;
+}
+.navbar-content .navbar-sound .sound-element {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-content .navbar-sound .sound-element p {
+  font-size: 14px;
+  color: #fff;
+  opacity: 0.4;
+}
+.navbar-content .navbar-sound .sound-element p i {
+  margin-left: 10px;
+}
+.navbar-content .navbar-sound .sound-element input[type=range] {
+  -webkit-appearance: none;
+  position: relative;
+  overflow: hidden;
+  height: 26px;
+  width: 50%;
+  cursor: pointer;
+  border-radius: 50px;
+}
+.navbar-content .navbar-sound .sound-element ::-webkit-slider-runnable-track {
+  background: #191919;
+}
+.navbar-content .navbar-sound .sound-element ::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #6e6e6e;
+  box-shadow: -213px 0 0 200px #F3B064;
+}
+.navbar-content .navbar-sound .sound-element ::-moz-range-track {
+  height: 26px;
+}
+.navbar-content .navbar-sound .sound-element ::-moz-range-thumb {
+  background: #fff;
+  height: 26px;
+  width: 26px;
+  border-radius: 50% !important;
+  box-shadow: -213px 0 0 200px #F3B064;
+  box-sizing: border-box;
+}
+.navbar-content .navbar-sound .sound-element ::-ms-fill-lower {
+  background: #F3B064;
+}
+.navbar-content .navbar-sound .sound-element ::-ms-thumb {
+  background: #fff;
+  height: 26px;
+  width: 26px;
+  box-sizing: border-box;
+}
+.navbar-content .navbar-sound .sound-element ::-ms-ticks-after {
+  display: none;
+}
+.navbar-content .navbar-sound .sound-element ::-ms-ticks-before {
+  display: none;
+}
+.navbar-content .navbar-sound .sound-element ::-ms-track {
+  background: #ddd;
+  color: transparent;
+  height: 26px;
+  border: none;
+}
+.navbar-content .navbar-sound .sound-element ::-ms-tooltip {
+  display: none;
+}
+.navbar-content .mix-mode {
+  background-color: #191919;
+  border-radius: 0 0 30px 30px;
+  transition: 0.2s ease-in-out;
+}
+.navbar-content .mix-mode a {
+  color: #fff;
+  opacity: 0.4;
+  color: #fff;
+  opacity: 0.4;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 13px;
+}
+.navbar-content .mix-mode:hover {
+  opacity: 0.4;
+}
+
+.activeNavbar {
+  display: block;
+}/*# sourceMappingURL=navbar.css.map */

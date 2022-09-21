@@ -79,3 +79,4 @@ btnRain.onclick = function() {
         countRain++
     } 
 }
+
