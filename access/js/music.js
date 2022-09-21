@@ -3,12 +3,13 @@ const btnPause = $('.btn-pause')
 const audio = $('#audio')
 const btnMusics = $$('.musics-btn')
 const musicVolume = $('.music-volume')
+const navbarBtn = $('.navbarBtn')
+
+// Loop audio Effect
 const keyboardChange = $('.keyboard-sound')
 const rainyChange = $('.rainy-sound')
 const trafficChange = $('.traffic-sound')
 
-const navbarBtn = $('.navbarBtn')
-// Loop audio Effect
 const audioKeyboard = $('#audio-keyboard')
 const audioRainy = $('#audio-rainy')
 const audioTraffic = $('#audio-traffic')
@@ -20,6 +21,7 @@ audioKeyboard.load()
 audioRainy.src = 'access/music/keyboard/rainy.mp3'
 audioRainy.loop = true
 audioRainy.load()
+audioRainy.volume = 0.5
 
 audioTraffic.src = 'access/music/keyboard/traffic2.mp3'
 audioTraffic.loop = true
@@ -77,6 +79,7 @@ const app = {
                 }
             })
         })
+
         // Set volume music
         musicVolume.onchange = () => {
             audio.volume = musicVolume.value

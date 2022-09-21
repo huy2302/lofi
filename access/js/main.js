@@ -45,6 +45,8 @@ btnRain.onclick = function() {
             switchVideo()
             $('.bg-video__rainynight').classList.add('active')
         }
+        audioRainy.play()
+        rainyChange.value = 0.5
         countRain++;
     } else if (countRain % 2 != 0){
         if ($('.bg-video__rainyday').classList.contains('active')) {
@@ -54,6 +56,8 @@ btnRain.onclick = function() {
             switchVideo()
             $('.bg-video__night').classList.add('active')
         }
+        audioRainy.pause()
+        rainyChange.value = 0
         countRain++
     } 
 }
