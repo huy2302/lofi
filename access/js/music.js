@@ -1,8 +1,14 @@
 const btnPlay = $('.btn-play')
 const btnPause = $('.btn-pause')
 const audio = $('#audio')
+const audioKeyboard = $('#audio-keyboard')
 const navbarBtn = $('.navbarBtn')
 const btnMusics = $$('.musics-btn')
+const keyboardChange = $('.keyboard-sound')
+const musicVolume = $('.music-volume')
+audioKeyboard.src = 'access/music/keyboard/keyboard.mp3'
+audioKeyboard.loop = true
+audioKeyboard.load()
 
 audio.src = 'access/music/Chill/mixichill.mp3'
 const btnPlayPause = $$('.btn')
@@ -53,10 +59,23 @@ const app = {
                 } else {
                     audio.pause()
                 }
-                // btnPause.classList.remove('active')
-                // btnPlay.classList.add('active')
             })
         })
+        // Set volume music
+        musicVolume.onchange = () => {
+            audio.volume = musicVolume.value
+        }
+
+        // Set keyboard sound effect
+        keyboardChange.onchange = () => {
+            audioKeyboard.volume = keyboardChange.value
+            if (keyboardChange.value > 0) {
+                audioKeyboard.play()
+            } else {
+                audioKeyboard.pause()
+            }
+        }
+
     },
     start: function() {
         this.handleEvent()

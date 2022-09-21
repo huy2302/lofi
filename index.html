@@ -85,7 +85,7 @@
                             <h3 class="navbar-btn-h3">Study</h3>
                         </div>
                     </button>
-                    <button class="musics-btn"> 
+                    <button class="musics-btn activeMusics"> 
                         <div>
                             <i class="fa-solid fa-mug-saucer"></i>
                             <h3 class="navbar-btn-h3">Chill</h3>
@@ -94,14 +94,14 @@
                 </div>
                 <div class="volume-line">
                     <i class="fa-solid fa-volume-off"></i>
-                    <input type="range" id="rngVolume" min="0" max="1" step=".01" value=".5"/>  
+                    <input class="music-volume" type="range" id="rngVolume" min="0" max="1" step=".01" value=".5"/>  
                     <i class="fa-solid fa-volume-high"></i>
                 </div>
                 <div class="navbar-sound">                    
                     <h2>Sounds</h2>
                     <div class="sound-element">
                         <p>Keyboard <i class="fa-solid fa-keyboard"></i></p>
-                        <input type="range" id="rngVolume" min="0" max="1" step=".01" value="0"/>  
+                        <input class="keyboard-sound" type="range" id="rngVolume" min="0" max="1" step=".01" value="0"/>  
                     </div>
                     <div class="sound-element">
                         <p>Summer Storm <i class="fa-solid fa-cloud-bolt"></i></p>
@@ -141,8 +141,7 @@
                     </div>
                 </div>
             </button>
-
-            </div>
+        </div>
         </div>
         <div class="btn-direction">
             <div class="direction-container">
@@ -153,6 +152,7 @@
             </div>
         </div>
         <audio id="audio" src=""></audio>
+        <audio id="audio-keyboard" src=""></audio>
         <div class="menu">
             <div class="menu--container">
                 <div class="menu--content">
