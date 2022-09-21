@@ -105,11 +105,11 @@
                     </div>
                     <div class="sound-element">
                         <p>Summer Storm <i class="fa-solid fa-cloud-bolt"></i></p>
-                        <input type="range" id="rngVolume" min="0" max="1" step=".01" value="0"/>  
+                        <input class="rainy-sound" type="range" id="rngVolume" min="0" max="1" step=".01" value="0"/>  
                     </div>
                     <div class="sound-element">
-                        <p>Ocean <i class="fa-solid fa-water"></i></p>
-                        <input type="range" id="rngVolume" min="0" max="1" step=".01" value="0"/> 
+                        <p>Traffic <i class="fa-solid fa-car-side"></i></p>
+                        <input class="traffic-sound" type="range" id="rngVolume" min="0" max="1" step=".01" value="0"/> 
                     </div>
                 </div>
                 <div class="mix-mode">
@@ -153,6 +153,8 @@
         </div>
         <audio id="audio" src=""></audio>
         <audio id="audio-keyboard" src=""></audio>
+        <audio src="" id="audio-rainy"></audio>
+        <audio src="" id="audio-traffic"></audio>
         <div class="menu">
             <div class="menu--container">
                 <div class="menu--content">

@@ -1,20 +1,36 @@
 const btnPlay = $('.btn-play')
 const btnPause = $('.btn-pause')
 const audio = $('#audio')
-const audioKeyboard = $('#audio-keyboard')
-const navbarBtn = $('.navbarBtn')
 const btnMusics = $$('.musics-btn')
-const keyboardChange = $('.keyboard-sound')
 const musicVolume = $('.music-volume')
+const keyboardChange = $('.keyboard-sound')
+const rainyChange = $('.rainy-sound')
+const trafficChange = $('.traffic-sound')
+
+const navbarBtn = $('.navbarBtn')
+// Loop audio Effect
+const audioKeyboard = $('#audio-keyboard')
+const audioRainy = $('#audio-rainy')
+const audioTraffic = $('#audio-traffic')
+
 audioKeyboard.src = 'access/music/keyboard/keyboard.mp3'
 audioKeyboard.loop = true
 audioKeyboard.load()
+
+audioRainy.src = 'access/music/keyboard/rainy.mp3'
+audioRainy.loop = true
+audioRainy.load()
+
+audioTraffic.src = 'access/music/keyboard/traffic2.mp3'
+audioTraffic.loop = true
+audioTraffic.load()
+
 
 audio.src = 'access/music/Chill/mixichill.mp3'
 const btnPlayPause = $$('.btn')
 const app = {
     _isplaying: false,
-    handleEvent: function() {
+    handleEvent: function () {
         // Click play and pause
         btnPlayPause.forEach(btn => {
             btn.onclick = function () {
@@ -25,13 +41,13 @@ const app = {
                     _isplaying = true
                 } else {
                     btnPlay.classList.add('active')
-                    btnPause.classList.remove('active') 
+                    btnPause.classList.remove('active')
                     audio.pause()
                     _isplaying = false
                 }
             }
         })
-        
+
         // Click show and hide navbar
         navbarBtn.onclick = function () {
             if ($('.navbar-content').classList.contains('active')) {
@@ -76,8 +92,28 @@ const app = {
             }
         }
 
+        // Set rainy storm sound effect
+        rainyChange.onchange = () => {
+            audioRainy.volume = rainyChange.value
+            if (rainyChange.value > 0) {
+                audioRainy.play()
+            } else {
+                audioRainy.pause()
+            }
+        }
+
+        // Set trafic sound effect
+        trafficChange.onchange = () => {
+            audioTraffic.volume = trafficChange.value
+            if (trafficChange.value > 0) {
+                audioTraffic.play()
+            } else {
+                audioTraffic.pause()
+            }
+        }
+
     },
-    start: function() {
+    start: function () {
         this.handleEvent()
 
     }
