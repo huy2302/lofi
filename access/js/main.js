@@ -1,9 +1,9 @@
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
 
-const btnConvert = $('.switch')
 const video = $$('.bg-video')
 var i = 2
+// Switch Btn Rainy of Dry
 const btn = $('.switch-btn')
 const switchVideo = function () {
     video.forEach((btn) => {
@@ -12,6 +12,7 @@ const switchVideo = function () {
         }
     })
 }
+// Switch video
 btn.onclick = function () {
     if (i % 2 == 0) {
         if ($('.bg-video__day').classList.contains('active')) {
@@ -32,30 +33,7 @@ btn.onclick = function () {
     }
     i += 0.5    
 }
-
-var elem = document.documentElement;
-
-function isFullScreen() {
-    return window.screenTop == 0 ? true : false;
-}
-function openFullscreen() {
-    if (elem.requestFullscreen) {
-        elem.requestFullscreen();
-    } else if (elem.webkitRequestFullscreen) { /* Safari */
-        elem.webkitRequestFullscreen();
-    } else if (elem.msRequestFullscreen) { /* IE11 */
-        elem.msRequestFullscreen();
-    } if (!isFullScreen()) {
-        if (document.exitFullscreen) {
-            document.exitFullscreen();
-        } else if (document.webkitExitFullscreen) { /* Safari */
-            document.webkitExitFullscreen();
-        } else if (document.msExitFullscreen) { /* IE11 */
-            document.msExitFullscreen();
-        }
-    }
-}
-
+// Switch video Rainy
 const btnRain = $('.btn-rains')
 var countRain = 2
 btnRain.onclick = function() {
@@ -78,5 +56,28 @@ btnRain.onclick = function() {
         }
         countRain++
     } 
+}
+
+// Click fullscreen
+var elem = document.documentElement;
+function isFullScreen() {
+    return window.screenTop == 0 ? true : false;
+}
+function openFullscreen() {
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) { /* Safari */
+        elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { /* IE11 */
+        elem.msRequestFullscreen();
+    } if (!isFullScreen()) {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) { /* Safari */
+            document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) { /* IE11 */
+            document.msExitFullscreen();
+        }
+    }
 }
 
