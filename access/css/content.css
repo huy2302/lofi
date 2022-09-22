@@ -1,0 +1,38 @@
+.realtime-active {
+  display: block !important;
+}
+
+.realtime-content {
+  position: absolute;
+  bottom: 130px;
+  left: 75px;
+  cursor: context-menu;
+  z-index: 2;
+  display: none;
+}
+.realtime-content p {
+  text-shadow: 1px 4px 4px #000000;
+  margin: 0;
+}
+.realtime-content div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.realtime-content div p {
+  color: #fff;
+  font-size: 25.5px;
+  font-weight: 400;
+}
+.realtime-content .time-info {
+  font-size: 19.125px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 30px;
+}
+.realtime-content .quote {
+  color: #fff;
+  font-size: 15.3px;
+  font-style: italic;
+}/*# sourceMappingURL=content.css.map */

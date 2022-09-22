@@ -1,0 +1,40 @@
+.realtime-active {
+    display: block !important;
+}
+
+.realtime-content {
+    position: absolute;    
+    bottom: 130px;
+    left: 75px;
+    cursor: context-menu;
+    z-index: 2;
+    display: none;
+
+    p {
+        text-shadow: 1px 4px 4px #000000;
+        margin: 0;
+    }
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+        p {
+            color: #fff;
+            font-size: 25.5px;
+            font-weight: 400;
+        }
+    }
+    .time-info {
+        font-size: 19.125px;
+        font-weight: 800;
+        color: #fff;
+        margin-bottom: 30px;
+    }
+    .quote {
+        color: #fff;
+        font-size: 15.3px;
+        font-style: italic;
+    }
+}

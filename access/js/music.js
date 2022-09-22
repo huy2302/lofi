@@ -3,7 +3,7 @@ const btnPause = $('.btn-pause')
 const audio = $('#audio')
 const btnMusics = $$('.musics-btn')
 const musicVolume = $('.music-volume')
-const navbarBtn = $('.navbarBtn')
+const navbarBtn = $$('.navbarBtn')
 
 // Loop audio Effect
 const keyboardChange = $('.keyboard-sound')
@@ -51,13 +51,18 @@ const app = {
         })
 
         // Click show and hide navbar
-        navbarBtn.onclick = function () {
-            if ($('.navbar-content').classList.contains('active')) {
-                $('.navbar-content').classList.remove('active')
-            } else {
-                $('.navbar-content').classList.add('active')
+        navbarBtn.forEach((btn, index) => {
+            btn.onclick = function () {
+                // index = 0 : Show navbar
+                if(index == 0) {
+                    if ($('.navbar-content').classList.contains('active')) {
+                        $('.navbar-content').classList.remove('active')
+                    } else {
+                        $('.navbar-content').classList.add('active')
+                    }
+                }
             }
-        }
+        })
         // Click focus Btn
         btnMusics.forEach((btn, index) => {
             btn.addEventListener('click', () => {
@@ -84,6 +89,18 @@ const app = {
         musicVolume.onchange = () => {
             audio.volume = musicVolume.value
         }
+        $('.fa-volume-off').onclick = function () {
+            if (audio.volume <= 1 && audio.volume >= 0) {
+                audio.volume -= 0.1
+                musicVolume.value = audio.volume
+            }
+        }
+        $('.fa-volume-high').onclick = function () {
+            if (audio.volume <= 1 && audio.volume >= 0) {
+                audio.volume += 0.1
+                musicVolume.value = audio.volume
+            }
+        }
 
         // Set keyboard sound effect
         keyboardChange.onchange = () => {
@@ -99,8 +116,22 @@ const app = {
         rainyChange.onchange = () => {
             audioRainy.volume = rainyChange.value
             if (rainyChange.value > 0) {
+                if ($('.bg-video__day').classList.contains('active')) {
+                    switchVideo()
+                    $('.bg-video__rainyday').classList.add('active')
+                } else if ($('.bg-video__night').classList.contains('active')) {
+                    switchVideo()
+                    $('.bg-video__rainynight').classList.add('active')
+                }
                 audioRainy.play()
             } else {
+                if ($('.bg-video__rainyday').classList.contains('active')) {
+                    switchVideo()
+                    $('.bg-video__day').classList.add('active')
+                } else if ($('.bg-video__rainynight').classList.contains('active')) {
+                    switchVideo()
+                    $('.bg-video__night').classList.add('active')
+                }
                 audioRainy.pause()
             }
         }
@@ -121,4 +152,5 @@ const app = {
 
     }
 }
+audio.volume = 0.5
 app.start()
