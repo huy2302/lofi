@@ -14,7 +14,7 @@ const switchVideo = function () {
 }
 // Switch video
 btn.onclick = function () {
-    if (i % 2 == 0) {
+    if (i % 2 == 1) {
         if ($('.bg-video__day').classList.contains('active')) {
             switchVideo()
             $('.bg-video__night').classList.add('active')
@@ -22,7 +22,7 @@ btn.onclick = function () {
             switchVideo()
             $('.bg-video__rainynight').classList.add('active')
         }
-    } else if (i % 2 == 1) {
+    } else if (i % 2 == 0) {
         if ( $('.bg-video__night').classList.contains('active')) {
             switchVideo()
             $('.bg-video__day').classList.add('active')
@@ -33,17 +33,17 @@ btn.onclick = function () {
     }
     i += 0.5    
 }
-function getVideoRealtime() {
-    var hours = new Date().getHours()
-    if (hours >= 6 && hours <= 17) {
-        $('.bg-video__day').classList.add('active')
+// function getVideoRealtime() {
+//     var hours = new Date().getHours()
+//     if (hours >= 6 && hours <= 17) {
+//         $('.bg-video__day').classList.add('active')
       
-    } else  {
-        $('.bg-video__night').classList.add('active')
+//     } else  {
+//         $('.bg-video__night').classList.add('active')
     
-    } 
-}
-getVideoRealtime()
+//     } 
+// // }
+// getVideoRealtime()
 // Switch video Rainy
 const btnRain = $('.btn-rains')
 var countRain = 2
