@@ -153,3 +153,7 @@ function dragElement(elmnt) {
         $('#realtime-content').style.cursor = 'grab';
     }
 }
+setTimeout(() => {
+    $('.app-start').style.display = 'none';
+    cconsole.log(1)
+}, 1800);

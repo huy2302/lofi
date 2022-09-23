@@ -36,4 +36,50 @@
   color: #fff;
   font-size: 15.3px;
   font-style: italic;
+}
+
+.app-start {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(20, 20, 29);
+  z-index: 100;
+  -webkit-animation: startLofi ease 2s;
+          animation: startLofi ease 2s;
+}
+.app-start div {
+  width: 100%;
+  text-align: center;
+  line-height: 120vh;
+}
+.app-start div img {
+  border-style: none;
+  width: 300px;
+  height: 167px;
+}
+
+@-webkit-keyframes startLofi {
+  0% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes startLofi {
+  0% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }/*# sourceMappingURL=content.css.map */

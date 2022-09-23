@@ -33,6 +33,17 @@ btn.onclick = function () {
     }
     i += 0.5    
 }
+function getVideoRealtime() {
+    var hours = new Date().getHours()
+    if (hours >= 6 && hours <= 17) {
+        $('.bg-video__day').classList.add('active')
+      
+    } else  {
+        $('.bg-video__night').classList.add('active')
+    
+    } 
+}
+getVideoRealtime()
 // Switch video Rainy
 const btnRain = $('.btn-rains')
 var countRain = 2

@@ -32,14 +32,6 @@ audio.src = 'access/music/Chill/mixichill.mp3'
 const btnPlayPause = $$('.btn')
 const app = {
     _isplaying: false,
-    setVideoRealtime: function () {
-        var hours = new Date().getHours()
-        if (hours >= 6 && hours <= 17) {
-            $('.bg-video__day').classList.add('active')
-        } else  {
-            $('.bg-video__night').classList.add('active')
-        } 
-    },
     handleEvent: function () {
         // Click play and pause
         btnPlayPause.forEach(btn => {
@@ -156,7 +148,6 @@ const app = {
 
     },
     start: function () {
-        this.setVideoRealtime()
 
         this.handleEvent()
     }
