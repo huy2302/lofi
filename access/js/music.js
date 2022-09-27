@@ -27,34 +27,46 @@ audioTraffic.src = 'access/music/keyboard/traffic2.mp3'
 audioTraffic.loop = true
 audioTraffic.load()
 
-
 audio.src = 'access/music/Chill/mixichill.mp3'
 const btnPlayPause = $$('.btn')
 const app = {
     _isplaying: false,
     handleEvent: function () {
+        const play = function () {
+            btnPlay.classList.remove('active')
+            btnPause.classList.add('active')
+            audio.play()
+            _isplaying = true
+        }
+        const pause = function () {
+            btnPlay.classList.add('active')
+            btnPause.classList.remove('active')
+            audio.pause()
+            _isplaying = false
+        }
         // Click play and pause
         btnPlayPause.forEach(btn => {
             btn.onclick = function () {
                 if (btnPlay.classList.contains('active')) {
-                    btnPlay.classList.remove('active')
-                    btnPause.classList.add('active')
-                    audio.play()
-                    _isplaying = true
+                    play()
                 } else {
-                    btnPlay.classList.add('active')
-                    btnPause.classList.remove('active')
-                    audio.pause()
-                    _isplaying = false
+                    pause()
                 }
             }
         })
-
+        // Space button 
+        document.addEventListener('keyup', (event) => {
+            if (event.code == 'Space' && btnPlay.classList.contains('active')) {
+                play()
+            } else if (event.code == 'Space' && btnPause.classList.contains('active')) {
+                pause()
+            }
+        })
         // Click show and hide navbar
         navbarBtn.forEach((btn, index) => {
             btn.onclick = function () {
                 // index = 0 : Show navbar
-                if(index == 0) {
+                if (index == 0) {
                     if ($('.navbar-content').classList.contains('active')) {
                         $('.navbar-content').classList.remove('active')
                     } else {
