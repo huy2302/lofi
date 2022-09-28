@@ -1,7 +1,7 @@
 .navbar-content {
     display: none;
     position: absolute;
-    right: 67px;
+    right: 79px;
     top: 140px;
     width: 345px;
     border-radius: 30px;
@@ -81,9 +81,13 @@
         margin: 32px 32px;
         align-items: center;
 
+        button {
+            background-color: rgba(0,0,0,0);
+            border: none;
+            cursor: pointer;
+        }
         i {
             color: #F3B064;
-            cursor: pointer;
         }
 
         input[type="range"] {

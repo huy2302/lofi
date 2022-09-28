@@ -67,9 +67,13 @@
   margin: 32px 32px;
   align-items: center;
 }
+.navbar-content .volume-line button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  cursor: pointer;
+}
 .navbar-content .volume-line i {
   color: #F3B064;
-  cursor: pointer;
 }
 .navbar-content .volume-line input[type=range] {
   -webkit-appearance: none;

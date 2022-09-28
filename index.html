@@ -23,20 +23,6 @@
             <div class="header-img">
                 <img src="./access/img/logo.0cbf9e63.gif" alt="logo">
             </div>
-            <!-- <ul id="navbar" style="display: flex;">
-                <li><a href="">How to works</a></li>
-                <li><a href="">Prising</a></li>
-                <li><a href="">Contact us</a></li>
-                <li>
-                    <a href="">More</a>
-                    <ul class="subnav">
-                        <li><a href="">About us</a></li>
-                        <li><a href="">Submissions</a></li>
-                        <li><a href="">Spotify</a></li>
-                    </ul>
-                </li>
-                <li><a href="">Merch</a></li>
-            </ul> -->
 
             <div class="header-setting">
                 <div class="real-time">
@@ -51,13 +37,26 @@
                     </label>
                 </div>
                 <!-- Toggle Switch -->
-
-                <button class="btn-full" onclick="openFullscreen()">
-                    <i class="fas fa-expand"></i>
+                <button class="signup-btn">
+                    Sign up
                 </button>
-                <a class="share " href="">Share</a>
-                <a class="signup " href="">Sign up</a>
-                <a class="login" href="">Login</a>
+                <div class="btn-header">
+                    <button>
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </button>
+                    <button class="btn-mute btnMuteActive">
+                        <i class="fa-solid fa-volume-xmark"></i>
+                    </button>
+                    <button class="btn-hight">
+                        <i class="fa-solid fa-volume-high"></i>
+                    </button>
+                    <button class="btn-full" onclick="openFullscreen()">
+                        <i class="fas fa-expand"></i>
+                    </button>
+                    <button>
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </header>
@@ -110,9 +109,13 @@
                     </button>
                 </div>
                 <div class="volume-line">
-                    <i class="fa-solid fa-volume-off"></i>
+                    <button class="btn-volume_reduce">
+                        <i class="fa-solid fa-volume-off"></i>
+                    </button>
                     <input class="music-volume" type="range" id="rngVolume" min="0" max="1" step=".01" value=".5"/>  
-                    <i class="fa-solid fa-volume-high"></i>
+                    <button class="btn-volume_increase">
+                        <i class="fa-solid fa-volume-high"></i>
+                    </button>
                 </div>
                 <div class="navbar-sound">                    
                     <h2>Sounds</h2>

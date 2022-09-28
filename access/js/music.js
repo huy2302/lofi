@@ -100,14 +100,30 @@ const app = {
         // Set volume music
         musicVolume.onchange = () => {
             audio.volume = musicVolume.value
-        }
-        $('.fa-volume-off').onclick = function () {
-            if (audio.volume <= 1 && audio.volume >= 0) {
-                audio.volume -= 0.1
-                musicVolume.value = audio.volume
+            if (audio.volume == 0) {
+                btnMute.classList.remove('btnMuteActive')
+                btnHight.classList.add('btnMuteActive')
+            } else if (audio.volume > 0){
+                btnMute.classList.add('btnMuteActive')
+                btnHight.classList.remove('btnMuteActive')
             }
         }
-        $('.fa-volume-high').onclick = function () {
+        $('.btn-volume_reduce').onclick = function () {
+            if (audio.volume <= 1 && audio.volume >= 0) {
+                musicVolume.value -= 0.1
+                audio.volume = musicVolume.value
+            } 
+            if (audio.volume <= 0) {
+                console.log(musicVolume.value)
+                btnMute.classList.remove('btnMuteActive')
+                btnHight.classList.add('btnMuteActive')
+            }
+        }
+        $('.btn-volume_increase').onclick = function () {
+            if (audio.volume == 0) {
+                btnMute.classList.add('btnMuteActive')
+                btnHight.classList.remove('btnMuteActive')
+            }
             if (audio.volume <= 1 && audio.volume >= 0) {
                 audio.volume += 0.1
                 musicVolume.value = audio.volume
@@ -156,6 +172,23 @@ const app = {
             } else {
                 audioTraffic.pause()
             }
+        }
+        // header btn music
+        const btnMute = $('.btn-mute')
+        const btnHight = $('.btn-hight')
+        var musicVolumeTemp = 0
+        btnHight.onclick = function () {
+            btnMute.classList.remove('btnMuteActive')
+            btnHight.classList.add('btnMuteActive')
+            musicVolumeTemp = musicVolume.value
+            musicVolume.value = 0
+            audio.volume = musicVolume.value
+        }
+        btnMute.onclick = function () {
+            btnMute.classList.add('btnMuteActive')
+            btnHight.classList.remove('btnMuteActive')
+            musicVolume.value = musicVolumeTemp
+            audio.volume = musicVolume.value
         }
 
     },

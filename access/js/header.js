@@ -157,3 +157,4 @@ function dragElement(elmnt) {
 setTimeout(() => {
     $('.app-start').style.display = 'none';
 }, 1800);
+
