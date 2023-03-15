@@ -85,3 +85,24 @@ function openFullscreen() {
     }
 }
 
+// show and hide menu
+const menu = document.querySelector('.menu_setting')
+const showHideMenu = () => {
+    if(menu.classList.contains('active-menu')) {
+        menu.classList.remove('active-menu')
+    } else {
+        menu.classList.add('active-menu')
+    }
+}
+
+// show and hide Menu
+const hideMenu = () => {
+    menu.classList.add('active-menu')
+}
+document.addEventListener('click', hideMenu)
+document.querySelector('.btn-menu').addEventListener('click', function(event){
+    event.stopPropagation()
+})
+menu.addEventListener('click', function(event){
+    event.stopPropagation()
+})

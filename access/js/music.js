@@ -65,13 +65,12 @@ fetch("https://my-json-server.typicode.com/huy2302/databaseMusic/musics")
                     }
                 })
                 // auto next when song ended
-                setInterval(() => {
-                    audio.addEventListener('ended', function () {
-                        this._id += 1
-                        audio.src = `${data[this._id].link}` 
-                        audio.play()
-                    })
-                }, 1000);
+                audio.onended = () => {
+                    this._id += 1
+                    audio.src = `${data[this._id].link}` 
+                    audio.play()
+                }
+                
                 // Space button 
                 document.addEventListener('keyup', (event) => {
                     if (event.code == 'Space' && btnPlay.classList.contains('active')) {
@@ -80,19 +79,7 @@ fetch("https://my-json-server.typicode.com/huy2302/databaseMusic/musics")
                         pause()
                     }
                 })
-                // Click show and hide navbar
-                navbarBtn.forEach((btn, index) => {
-                    btn.onclick = function () {
-                        // index = 0 : Show navbar
-                        if (index == 0) {
-                            if ($('.navbar-content').classList.contains('active')) {
-                                $('.navbar-content').classList.remove('active')
-                            } else {
-                                $('.navbar-content').classList.add('active')
-                            }
-                        }
-                    }
-                })
+                
 
                 // next and prev song
                 btnNext.onclick = () => {
@@ -116,30 +103,7 @@ fetch("https://my-json-server.typicode.com/huy2302/databaseMusic/musics")
                     } else {
                         audio.pause()
                     }
-                }
-
-                // Click focus Btn
-                btnMusics.forEach((btn, index) => {
-                    btn.addEventListener('click', () => {
-                        btnMusics.forEach((btn2) => {
-                            btn2.classList.remove('activeMusics')
-                        })
-                        btn.classList.add('activeMusics')
-                        if (index == 0) {
-                            audio.src = 'access/music/Sleep/sleep.mp3'
-                        } else if (index == 1) {
-                            audio.src = 'access/music/Study/study.mp3'
-                        } else if (index == 2) {
-                            audio.src = 'access/music/Chill/mixichill.mp3'
-                        }
-                        if (_isplaying) {
-                            audio.play()
-                        } else {
-                            audio.pause()
-                        }
-                    })
-                })
-        
+                } 
                 // Set volume music
                 musicVolume.onchange = () => {
                     audio.volume = musicVolume.value
@@ -236,13 +200,45 @@ fetch("https://my-json-server.typicode.com/huy2302/databaseMusic/musics")
         
             },
             start: function () {
-        
                 this.handleEvent()
             }
         }
         audio.volume = 0.5
         app.start()
     });
-
+// Click focus Btn
+btnMusics.forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+        btnMusics.forEach((btn2) => {
+            btn2.classList.remove('activeMusics')
+        })
+        btn.classList.add('activeMusics')
+        if (index == 0) {
+            audio.src = 'access/music/Sleep/sleep.mp3'
+        } else if (index == 1) {
+            audio.src = 'access/music/Study/study.mp3'
+        } else if (index == 2) {
+            audio.src = 'access/music/Chill/mixichill.mp3'
+        }
+        if (_isplaying) {
+            audio.play()
+        } else {
+            audio.pause()
+        }
+    })
+})
+// Click show and hide navbar
+navbarBtn.forEach((btn, index) => {
+    btn.onclick = function () {
+        // index = 0 : Show navbar
+        if (index == 0) {
+            if ($('.navbar-content').classList.contains('active')) {
+                $('.navbar-content').classList.remove('active')
+            } else {
+                $('.navbar-content').classList.add('active')
+            }
+        }
+    }
+})
 // audio.src = 'access/music/Chill/mixichill.mp3'
 const btnPlayPause = $$('.btn')

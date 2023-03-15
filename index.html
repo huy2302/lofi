@@ -48,26 +48,24 @@
                         <i class="fas fa-moon fa-moon fas-hide"></i>
                     </label>
                 </div>
-                <!-- Toggle Switch -->
-                <button class="signup-btn">
-                    Sign up
-                </button>
                 <div class="btn-header">
                     <button>
                         <i class="fa-solid fa-share-nodes"></i>
                     </button>
-                    <button class="btn-prev btn_function_music" style="border-radius: 5px 0 0 5px!important;">
-                        <i class="fa-solid fa-backward-fast"></i>
-                    </button>
-                    <button class="btn_function_music btn btn-pause ">
-                        <i class="fa-solid fa-pause"></i>
-                    </button>
-                    <button class="btn_function_music btn btn-play active">
-                        <i class="fa-solid fa-play"></i>
-                    </button>
-                    <button class="btn-next btn_function_music" style="border-radius: 0 5px 5px 0!important; ">
-                        <i class="fa-solid fa-forward-fast"></i>
-                    </button>
+                    <div style="margin: 0 5px">
+                        <button class="btn-prev btn_function_music" style="border-radius: 5px 0 0 5px!important;">
+                            <i class="fa-solid fa-backward-fast"></i>
+                        </button>
+                        <button class="btn_function_music btn btn-pause ">
+                            <i class="fa-solid fa-pause"></i>
+                        </button>
+                        <button class="btn_function_music btn btn-play active">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                        <button class="btn-next btn_function_music" style="border-radius: 0 5px 5px 0!important; ">
+                            <i class="fa-solid fa-forward-fast"></i>
+                        </button>
+                    </div>
                     <button class="btn-mute btnMuteActive">
                         <i class="fa-solid fa-volume-xmark"></i>
                     </button>
@@ -77,20 +75,19 @@
                     <button class="btn-full" onclick="openFullscreen()">
                         <i class="fas fa-expand"></i>
                     </button>
-                    <button>
+                    <button class="btn-menu" onclick="showHideMenu()">
                         <i class="fa-solid fa-bars"></i>
                     </button>
-                    <ul class="menu_setting">
-                        <li><a href="">Login/Signup</a></li> 
-                        <li><a href="">General Settings</a></li> 
-                        <li><a href="">Pricing</a></li> 
-                        <li><a href="">Contact us</a></li> 
-                        <li><a href="">How it works</a></li> 
-                        <li><a href="">FAQ</a></li> 
-                        <li><a href="">About us</a></li> 
-                        <li><a href="">Share feedback</a></li> 
-                    </ul>
                 </div>
+                <ul class="menu_setting active-menu">
+                    <li><a href=""><i class="fa-solid fa-user"></i> Login/Signup</a></li> 
+                    <li><a href=""><i class="fa-solid fa-gear"></i> General Settings</a></li> 
+                    <li><a href=""><i class="fa-solid fa-tag"></i> Pricing</a></li> 
+                    <li><a href=""><i class="fa-solid fa-message"></i> Contact us</a></li> 
+                    <li><a href=""><i class="fa-solid fa-circle-question"></i> How it works</a></li> 
+                    <li><a href=""><i class="fa-solid fa-comments"></i> FAQ</a></li> 
+                    <li><a href=""><i class="fa-solid fa-circle-info"></i> About us</a></li> 
+                </ul>
             </div>
         </div>
     </header>
@@ -99,7 +96,7 @@
             <img src="./access/img/logo.0cbf9e63.gif" alt="">
         </div>
     </div>
-    <div id="realtime-content" class="realtime-content">
+    <div id="realtime-content" class="realtime-content realtime-active">
         <div>
             <p class="session-content"></p>
             <p class="hours-content"></p>
