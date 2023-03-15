@@ -16,7 +16,19 @@
     <link rel="stylesheet" href="./access/css/btn.css">
     <link rel="stylesheet" href="./access/css/content.css">
 </head>
-
+<style>
+    .btn_function_music {
+        border-radius: 0 !important;
+        margin: 0 -2px !important;
+        width: 40px !important;
+    }
+    .active {
+        display: initial !important;
+    }
+    .btn_function_music i {
+        font-size: 14px !important;
+    }
+</style>
 <body>
     <header>
         <div class="container">
@@ -44,6 +56,18 @@
                     <button>
                         <i class="fa-solid fa-share-nodes"></i>
                     </button>
+                    <button class="btn-prev btn_function_music" style="border-radius: 5px 0 0 5px!important;">
+                        <i class="fa-solid fa-backward-fast"></i>
+                    </button>
+                    <button class="btn_function_music btn btn-pause ">
+                        <i class="fa-solid fa-pause"></i>
+                    </button>
+                    <button class="btn_function_music btn btn-play active">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                    <button class="btn-next btn_function_music" style="border-radius: 0 5px 5px 0!important; ">
+                        <i class="fa-solid fa-forward-fast"></i>
+                    </button>
                     <button class="btn-mute btnMuteActive">
                         <i class="fa-solid fa-volume-xmark"></i>
                     </button>
@@ -56,6 +80,16 @@
                     <button>
                         <i class="fa-solid fa-bars"></i>
                     </button>
+                    <ul class="menu_setting">
+                        <li><a href="">Login/Signup</a></li> 
+                        <li><a href="">General Settings</a></li> 
+                        <li><a href="">Pricing</a></li> 
+                        <li><a href="">Contact us</a></li> 
+                        <li><a href="">How it works</a></li> 
+                        <li><a href="">FAQ</a></li> 
+                        <li><a href="">About us</a></li> 
+                        <li><a href="">Share feedback</a></li> 
+                    </ul>
                 </div>
             </div>
         </div>
@@ -163,14 +197,14 @@
             </button>
         </div>
         </div>
-        <div class="btn-direction">
+        <!-- <div class="btn-direction">
             <div class="direction-container">
                 <img class="btn-prev" src="./access/img/prev.svg" alt="">
                 <img class="btn btn-play active" src="./access/img/play.svg" alt="">
                 <img class="btn btn-pause" src="./access/img/pause.svg" alt="">
                 <img class="btn-next" src="./access/img/next.svg" alt="">
             </div>
-        </div>
+        </div> -->
         <audio id="audio" src=""></audio>
         <audio id="audio-keyboard" src=""></audio>
         <audio src="" id="audio-rainy"></audio>
