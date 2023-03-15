@@ -1,0 +1,140 @@
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    /* display: none; */
+    background-color: #000c;
+    z-index: 99999999;
+    -webkit-animation: showLoginModal .4s linear;
+    animation: showLoginModal .4s linear;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    /* transition: showLoginModal 0.3s cubic-bezier(0.71, 0.12, 1, 1); */
+}
+.modal-hide {
+    display: none;
+}
+.modal-container {
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    -webkit-animation: showLoginModal .4s linear;
+    animation: showLoginModal .4s linear;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    /* transition: showLoginModal 0.3s cubic-bezier(0.71, 0.12, 1, 1); */
+}
+.modal-container .modal-close {
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+.modal-container .modal-close:hover {
+    opacity: 0.3;
+}
+.modal-container .logo-img {
+    width: 250px;
+    margin-top: 100px;
+}
+.modal-container h3 {
+    font-size: 46px;
+    color: #fff;
+    margin: 20px 0;
+}
+.modal-container h4 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 50px;
+}
+.modal-container h3, .modal-container h4 {
+    text-align: center;
+}
+.modal-container > a {
+    color: #f3a952;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+.modal-container div p {
+    font-size: 16px;
+    color: #fff;
+    margin: 0;
+}
+.modal-container .signup {
+    display: flex;
+    justify-content: space-between;
+    margin: 2em 0px;
+}
+.modal-container div a {
+    color: #f3a952;
+    text-decoration: none;
+}
+.modal-container .modal-login {
+
+}
+.modal-container .modal-login input::placeholder {
+    color: #fff;
+    font-weight: 400;
+    opacity: 0.5;
+} 
+.modal-container .modal-login input {
+    border: 0;
+    width: 98%;
+    background: #14141d;
+    padding: 0 1em 0 2em;
+    outline: none;
+    color: #fff;
+}
+.modal-container .modal-login .div-outline {
+    border-bottom: 1px solid #3d3d3d;
+    width: 97%;
+    margin: 0 auto;
+}
+.modal-container .modal-login button {
+    border: navajowhite;
+    padding: 5px 35px;
+    border-radius: 20px;
+    background: #f3a952;
+    font-weight: 500;
+    display: block;
+    cursor: pointer;
+    margin: 3em auto 10px;
+}
+.modal-login .login-card { 
+    max-width: 100%;
+    width: 400px;
+    overflow: hidden; 
+    background: #14141d;  
+    border-radius: 10px;
+}
+.modal-login  .ouline_input {
+    display: flex;
+    flex-direction: row;
+}
+.modal-login  .ouline_input > div {
+    background-color: #f3a952;
+    height: 60px;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+    width: 4px;
+}
+input.input:focus+div {
+    opacity: 1;
+}
+
+@keyframes showLoginModal{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+

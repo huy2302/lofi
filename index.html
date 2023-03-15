@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="./access/css/btn.css">
     <link rel="stylesheet" href="./access/css/content.css">
+    <link rel="stylesheet" href="./access/css/register.css">
 </head>
 <style>
     .btn_function_music {
@@ -22,13 +23,16 @@
         margin: 0 -2px !important;
         width: 40px !important;
     }
+
     .active {
         display: initial !important;
     }
+
     .btn_function_music i {
         font-size: 14px !important;
     }
 </style>
+
 <body>
     <header>
         <div class="container">
@@ -38,7 +42,7 @@
 
             <div class="header-setting">
                 <div class="real-time">
-                    
+
                 </div>
                 <div class="switch-btn">
                     <label class="switch">
@@ -80,13 +84,13 @@
                     </button>
                 </div>
                 <ul class="menu_setting active-menu">
-                    <li><a href=""><i class="fa-solid fa-user"></i> Login/Signup</a></li> 
-                    <li><a href=""><i class="fa-solid fa-gear"></i> General Settings</a></li> 
-                    <li><a href=""><i class="fa-solid fa-tag"></i> Pricing</a></li> 
-                    <li><a href=""><i class="fa-solid fa-message"></i> Contact us</a></li> 
-                    <li><a href=""><i class="fa-solid fa-circle-question"></i> How it works</a></li> 
-                    <li><a href=""><i class="fa-solid fa-comments"></i> FAQ</a></li> 
-                    <li><a href=""><i class="fa-solid fa-circle-info"></i> About us</a></li> 
+                    <li><a onclick="showModal()"><i class="fa-solid fa-user"></i> Login/Signup</a></li>
+                    <li><a href=""><i class="fa-solid fa-gear"></i> General Settings</a></li>
+                    <li><a href=""><i class="fa-solid fa-tag"></i> Pricing</a></li>
+                    <li><a href=""><i class="fa-solid fa-message"></i> Contact us</a></li>
+                    <li><a href=""><i class="fa-solid fa-circle-question"></i> How it works</a></li>
+                    <li><a href=""><i class="fa-solid fa-comments"></i> FAQ</a></li>
+                    <li><a href=""><i class="fa-solid fa-circle-info"></i> About us</a></li>
                 </ul>
             </div>
         </div>
@@ -132,7 +136,7 @@
                             <h3 class="navbar-btn-h3">Study</h3>
                         </div>
                     </button>
-                    <button class="musics-btn activeMusics"> 
+                    <button class="musics-btn activeMusics">
                         <div>
                             <i class="fa-solid fa-mug-saucer"></i>
                             <h3 class="navbar-btn-h3">Chill</h3>
@@ -143,24 +147,24 @@
                     <button class="btn-volume_reduce">
                         <i class="fa-solid fa-volume-off"></i>
                     </button>
-                    <input class="music-volume" type="range" id="rngVolume" min="0" max="1" step=".01" value=".5"/>  
+                    <input class="music-volume" type="range" id="rngVolume" min="0" max="1" step=".01" value=".5" />
                     <button class="btn-volume_increase">
                         <i class="fa-solid fa-volume-high"></i>
                     </button>
                 </div>
-                <div class="navbar-sound">                    
+                <div class="navbar-sound">
                     <h2>Sounds</h2>
                     <div class="sound-element">
                         <p>Keyboard <i class="fa-solid fa-keyboard"></i></p>
-                        <input class="keyboard-sound" type="range" id="rngVolume" min="0" max="1" step=".01" value="0"/>  
+                        <input class="keyboard-sound" type="range" id="rngVolume" min="0" max="1" step=".01" value="0" />
                     </div>
                     <div class="sound-element">
                         <p>Storm <i class="fa-solid fa-cloud-bolt"></i></p>
-                        <input class="rainy-sound" type="range" id="rngVolume" min="0" max="1" step=".01" value="0"/>  
+                        <input class="rainy-sound" type="range" id="rngVolume" min="0" max="1" step=".01" value="0" />
                     </div>
                     <div class="sound-element">
                         <p>Traffic <i class="fa-solid fa-car-side"></i></p>
-                        <input class="traffic-sound" type="range" id="rngVolume" min="0" max="1" step=".01" value="0"/> 
+                        <input class="traffic-sound" type="range" id="rngVolume" min="0" max="1" step=".01" value="0" />
                     </div>
                 </div>
                 <div class="mix-mode">
@@ -168,7 +172,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="">
             <div class="bg-video bg-video__day">
                 <video class="videoIn" src="./access/video/BDR Day 112521 (1).mp4" preload="auto" loop="" playsinline="" webkit-playsinline="" x5-playsinline="" style="width: 100%; height: 100%;" autoplay="" muted></video>
@@ -228,9 +232,32 @@
             </div>
         </div>
     </section>
+    <section id="two">
+        
+    </section>
+    <!-- <div id="modal" class="modal">
+        <div class="modal-container">
+            <img class="modal-close" alt="" src="./access/img/close.svg">
+            <img class="logo-img" src="./access/img/logo.0cbf9e63.gif" alt="">
+            <h3>Welcome back!</h3>
+            <h4>Log In to your account</h4>
+            <form class="modal-login" action="" method="get">
+                <input type="text" placeholder="Email" style=" border-radius: 10px 10px 0 0;">
+                <div></div>
+                <input type="password" placeholder="Password" style="border-radius: 0 0 10px 10px;">
+                <button type="submit">Login</button>
+            </form>
+            <a href="#">Forgot password?</a>
+            <div>
+                <p>Don't have an account?</p>
+                <a href="#">Sign Up for free</a>
+            </div>
+        </div>
+    </div> -->
     <script src="./access/js/main.js"></script>
     <script src="./access/js/music.js"></script>
     <script src="./access/js/header.js"></script>
+    <script src="./access/js/modal_login.js"></script>
     <script src="https://kit.fontawesome.com/ed22bc2667.js" crossorigin="anonymous"></script>
 </body>
 
