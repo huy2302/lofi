@@ -16,7 +16,7 @@ const showModal = () => {
                 <div class="login-card">
                     <div class="ouline_input">
                         <input class="input" type="email" placeholder="Email" style=" border-radius: 10px 10px 0 0;">
-                        <div></div>
+                        <div></div> 
                     </div>
                     <div class="div-outline"></div>
                     <div class="ouline_input">
