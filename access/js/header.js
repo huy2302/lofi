@@ -39,7 +39,7 @@ function getRealTime() {
     var currentDay = new Date().getDay()
     var currentMonth = new Date().getMonth()
     var currentYear = new Date().getFullYear()
-    yearName = currentYear.toString()[2] + currentYear.toString()[2]
+    yearName = currentYear.toString()[2] + currentYear.toString()[3]
     var dayName = ''
     var monthName = ''
     switch (currentDay) {
