@@ -63,19 +63,19 @@ header .header-img img {
 }
 
 /* Toggle switch */
-.header-setting .switch {
+/* .header-setting .switch {
     position: relative;
     display: inline-block;
     width: 60px;
     height: 34px;
-}
+} */
 
 /* Hide default HTML checkbox */
-.header-setting .switch input {
+/* .header-setting .switch input {
     opacity: 0;
     width: 0;
     height: 0;
-}
+} */
 
 .slider {
     position: absolute;
@@ -197,7 +197,7 @@ input:checked+.slider:before {
     padding: 6px 8px;
     border-radius: 5px;
     cursor: pointer;
-    margin-right: 20px;
+    margin-right: 5em;
 }
 
 
