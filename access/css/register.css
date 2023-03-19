@@ -175,9 +175,9 @@ input.input:focus+div {
 .toggleWrapper {
     position: absolute;
     top: 50%;
-    right: -5em;
+    right: 20em;
     overflow: hidden;
-    padding: 0 200px;
+    /* padding: 0 200px; */
     transform: translate3d(-50%, -50%, 0);
 }
 

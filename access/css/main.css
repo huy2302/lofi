@@ -189,11 +189,7 @@ input:checked+.slider:before {
     cursor: pointer;
     margin-right: 5em;
 }
-
-.active {
-    display: block !important;
-}
-
+ 
 .icon-show i {
     font-size: 18px !important;
     opacity: 0.5;
@@ -203,13 +199,17 @@ input:checked+.slider:before {
     object-fit: cover;
     position: absolute;
 }
+.active {
+    display: block !important;
+    /* opacity: 1 !important; */
+}
 .bg-video {
-    -webkit-animation: showLoginModal .4s linear;
-    animation: showLoginModal .5s linear;
+    -webkit-animation: bgvideo .8s linear;
+    animation: bgvideo .8s linear;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
 }
-@keyframes showLoginModal {
+@keyframes bgvideo {
     from {
         opacity: 0.5;
     }
