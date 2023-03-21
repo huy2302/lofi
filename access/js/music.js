@@ -5,8 +5,6 @@ const btnMusics = $$('.musics-btn')
 const musicVolume = $('.music-volume')
 const navbarBtn = $$('.navbarBtn')
 
-console.log(btnPlay)
-
 const btnPrev = $('.btn-prev')
 const btnNext = $('.btn-next')
 // Loop audio Effect
@@ -34,7 +32,7 @@ audioTraffic.load()
 fetch("https://my-json-server.typicode.com/huy2302/databaseMusic/musics")
     .then((response) => response.json())
     .then((data) => {
-        audio.src = `${data[Math.floor(Math.random() * data.length)].link}` 
+        audio.src = `${data[Math.floor(Math.random() * data.length)].link}`
 
         const app = {
             _isplaying: false,
@@ -67,10 +65,10 @@ fetch("https://my-json-server.typicode.com/huy2302/databaseMusic/musics")
                 // auto next when song ended
                 audio.onended = () => {
                     this._id += 1
-                    audio.src = `${data[this._id].link}` 
+                    audio.src = `${data[this._id].link}`
                     audio.play()
                 }
-                
+
                 // Space button 
                 document.addEventListener('keyup', (event) => {
                     if (event.code == 'Space' && btnPlay.classList.contains('active')) {
@@ -79,7 +77,7 @@ fetch("https://my-json-server.typicode.com/huy2302/databaseMusic/musics")
                         pause()
                     }
                 })
-                
+
 
                 // next and prev song
                 btnNext.onclick = () => {
@@ -103,14 +101,14 @@ fetch("https://my-json-server.typicode.com/huy2302/databaseMusic/musics")
                     } else {
                         audio.pause()
                     }
-                } 
+                }
                 // Set volume music
                 musicVolume.onchange = () => {
                     audio.volume = musicVolume.value
                     if (audio.volume == 0) {
                         btnMute.classList.remove('btnMuteActive')
                         btnHight.classList.add('btnMuteActive')
-                    } else if (audio.volume > 0){
+                    } else if (audio.volume > 0) {
                         btnMute.classList.add('btnMuteActive')
                         btnHight.classList.remove('btnMuteActive')
                     }
@@ -119,7 +117,7 @@ fetch("https://my-json-server.typicode.com/huy2302/databaseMusic/musics")
                     if (audio.volume <= 1 && audio.volume >= 0) {
                         musicVolume.value -= 0.1
                         audio.volume = musicVolume.value
-                    } 
+                    }
                     if (audio.volume <= 0) {
                         console.log(musicVolume.value)
                         btnMute.classList.remove('btnMuteActive')
@@ -136,7 +134,7 @@ fetch("https://my-json-server.typicode.com/huy2302/databaseMusic/musics")
                         musicVolume.value = audio.volume
                     }
                 }
-        
+
                 // Set keyboard sound effect
                 keyboardChange.onchange = () => {
                     audioKeyboard.volume = keyboardChange.value
@@ -146,7 +144,7 @@ fetch("https://my-json-server.typicode.com/huy2302/databaseMusic/musics")
                         audioKeyboard.pause()
                     }
                 }
-        
+
                 // Set rainy storm sound effect
                 rainyChange.onchange = () => {
                     audioRainy.volume = rainyChange.value
@@ -170,7 +168,7 @@ fetch("https://my-json-server.typicode.com/huy2302/databaseMusic/musics")
                         audioRainy.pause()
                     }
                 }
-        
+
                 // Set trafic sound effect
                 trafficChange.onchange = () => {
                     audioTraffic.volume = trafficChange.value
@@ -197,7 +195,7 @@ fetch("https://my-json-server.typicode.com/huy2302/databaseMusic/musics")
                     musicVolume.value = musicVolumeTemp
                     audio.volume = musicVolume.value
                 }
-        
+
             },
             start: function () {
                 this.handleEvent()
@@ -206,6 +204,8 @@ fetch("https://my-json-server.typicode.com/huy2302/databaseMusic/musics")
         audio.volume = 0.5
         app.start()
     });
+
+    
 // Click focus Btn
 btnMusics.forEach((btn, index) => {
     btn.addEventListener('click', () => {
@@ -227,6 +227,7 @@ btnMusics.forEach((btn, index) => {
         }
     })
 })
+
 // Click show and hide navbar
 navbarBtn.forEach((btn, index) => {
     btn.onclick = function () {

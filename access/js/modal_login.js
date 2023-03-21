@@ -23,7 +23,7 @@ const showLogIn = () => {
 }
 
 modalCloses = $$('.modal-close')
-console.log(modalCloses)
+
 modalCloses.forEach((modalClose) => {
     modalClose.addEventListener('click', () => {
         $('#modal').classList.add('modal-hide')
